@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-label="Emrys mark">
+  <defs>
+    <radialGradient id="g" cx="35%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#9ee3ff" stop-opacity="1" />
+      <stop offset="55%" stop-color="#7e8cff" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#121d3a" stop-opacity="1" />
+    </radialGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10" result="b" />
+      <feColorMatrix in="b" type="matrix" values="1 0 0 0 0  0 0.8 1 0 0  0 0.6 1 0 0  0 0 0 0.8 0" />
+    </filter>
+  </defs>
+  <circle cx="160" cy="160" r="136" fill="url(#g)"/>
+  <circle cx="160" cy="160" r="108" fill="none" stroke="#eaf4ff" stroke-opacity="0.16" stroke-width="2"/>
+  <g filter="url(#glow)">
+    <path d="M96 130c0-18 15-33 33-33h62c18 0 33 15 33 33s-15 33-33 33h-54c-10 0-18 8-18 18v9c0 10 8 18 18 18h66c8 0 15 7 15 15s-7 15-15 15h-70c-34 0-62-28-62-62v-18c0-10 8-18 18-18s18 8 18 18v18c0 14 12 26 26 26h60c5 0 9-4 9-9s-4-9-9-9h-59c-29 0-53-24-53-53z" fill="#0c1222" opacity="0.52"/>
+  </g>
+  <path d="M96 130c0-18 15-33 33-33h62c18 0 33 15 33 33s-15 33-33 33h-54c-10 0-18 8-18 18v9c0 10 8 18 18 18h66c8 0 15 7 15 15s-7 15-15 15h-70c-34 0-62-28-62-62v-18c0-10 8-18 18-18s18 8 18 18v18c0 14 12 26 26 26h60c5 0 9-4 9-9s-4-9-9-9h-59c-29 0-53-24-53-53z" fill="#f4f8ff"/>
+</svg>
