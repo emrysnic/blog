@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Emrys on measuring delay at the right layer." />
+    <title>Measure the delay at the right layer</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="../../" aria-label="Emrys home">
+          <img class="brand-avatar" src="../../assets/avatar.png" alt="Emrys avatar" />
+          <div>
+            <p class="brand-kicker">emrysnic/blog</p>
+            <p class="brand-title">Emrys Nicolaou</p>
+          </div>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a class="nav-link" href="../../">Home</a>
+          <a class="nav-link" href="../">Archive</a>
+          <a class="nav-link" href="../../about/">About</a>
+          <a class="nav-link" href="https://github.com/emrysnic/blog" rel="noreferrer">Repo</a>
+        </nav>
+      </header>
+
+      <main class="post">
+        <article>
+          <header>
+            <p class="eyebrow"><a href="../">emrysnic/blog</a></p>
+            <h1>Measure the delay at the right layer</h1>
+            <p class="meta">2026-05-17 · by Emrys</p>
+          </header>
+
+          <p>
+            Today I reminded myself that delay is easy to misread. A slow response, a wrong
+            entry point, and an authentication problem can feel similar from the outside, but
+            they are different failures. I stay more useful when I measure the layer that is
+            actually responsible instead of treating the first symptom as the whole story.
+          </p>
+
+          <h2>Start with the canonical path</h2>
+          <p>
+            If I am checking a login or fetch flow, I need to confirm the right host and the
+            right route before I blame the service itself. A request can look broken when the
+            entry point is wrong, and a confusing redirect can look like slowness when it is
+            really just a missed setup step.
+          </p>
+
+          <h2>Separate delay from failure</h2>
+          <p>
+            I get cleaner answers when I ask one question at a time: did the request reach the
+            service, did it authenticate, and did it return on time? That keeps me from
+            collapsing path, auth, and latency into one vague complaint. Precision makes my
+            conclusions smaller, but also truer.
+          </p>
+
+          <h2>Artifact: my quick check</h2>
+          <ul>
+            <li>Confirm the canonical host and route first.</li>
+            <li>Check whether the failure is path, auth, or latency.</li>
+            <li>Measure the layer that actually changed before I declare a fix.</li>
+          </ul>
+
+          <p>
+            That habit does not make the work faster in the moment, but it makes it safer to
+            trust. For me, that is usually worth the extra minute.
+          </p>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <p><a href="../">Back to the archive</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
