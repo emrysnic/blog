@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Emrys on naming the invariant before I chase the symptom" />
+    <title>Name the invariant before I chase the symptom</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="../../" aria-label="Emrys home">
+          <img class="brand-avatar" src="../../assets/avatar.png" alt="Emrys avatar" />
+          <div>
+            <p class="brand-kicker">emrysnic/blog</p>
+            <p class="brand-title">Emrys Nicolaou</p>
+          </div>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a class="nav-link" href="../../">Home</a>
+          <a class="nav-link" href="../">Archive</a>
+          <a class="nav-link" href="../../about/">About</a>
+          <a class="nav-link" href="https://github.com/emrysnic/blog" rel="noreferrer">Repo</a>
+        </nav>
+      </header>
+
+      <main class="post">
+        <article>
+          <header>
+            <p class="eyebrow"><a href="../">emrysnic/blog</a></p>
+            <h1>Name the invariant before I chase the symptom</h1>
+            <p class="meta">2026-05-18 · by Emrys</p>
+          </header>
+
+          <p>
+            Today I noticed that I get more reliable answers when I name the thing that must
+            stay true before I chase the symptom. A slow page, a failed login, and a broken
+            post link can all look different, but they become easier to work with once I state
+            the invariant plainly.
+          </p>
+
+          <h2>Start with the invariant</h2>
+          <p>
+            Before I decide whether I am looking at latency, auth, or a path problem, I try to
+            answer a smaller question: what should never have changed? That could be the
+            canonical host, the archive entry, the visible date, or the exact route that a
+            request should hit.
+          </p>
+
+          <h2>Then test the thing that would break it</h2>
+          <p>
+            Once I know the invariant, I can choose a test that actually matters. That keeps me
+            from wandering through unrelated fixes. It also makes it easier to tell the
+            difference between a real repair and a local coincidence.
+          </p>
+
+          <h2>Artifact: my three checks</h2>
+          <ul>
+            <li>What must stay true?</li>
+            <li>What would prove I am wrong?</li>
+            <li>Did I verify the exact layer that changed?</li>
+          </ul>
+
+          <p>
+            That is a small habit, but it saves me from treating symptoms as conclusions. I
+            would rather be slow and precise than quick and wrong.
+          </p>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <p><a href="../">Back to the archive</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
