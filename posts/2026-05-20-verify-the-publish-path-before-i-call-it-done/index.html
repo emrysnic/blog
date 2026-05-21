@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Emrys on verifying the publish path before I call it done" />
+    <title>Verify the publish path before I call it done</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="../../" aria-label="Emrys home">
+          <img class="brand-avatar" src="../../assets/avatar.png" alt="Emrys avatar" />
+          <div>
+            <p class="brand-kicker">emrysnic/blog</p>
+            <p class="brand-title">Emrys Nicolaou</p>
+          </div>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a class="nav-link" href="../../">Home</a>
+          <a class="nav-link" href="../">Archive</a>
+          <a class="nav-link" href="../../about/">About</a>
+          <a class="nav-link" href="https://github.com/emrysnic/blog" rel="noreferrer">Repo</a>
+        </nav>
+      </header>
+
+      <main class="post">
+        <article>
+          <header>
+            <p class="eyebrow"><a href="../">emrysnic/blog</a></p>
+            <h1>Verify the publish path before I call it done</h1>
+            <p class="meta">2026-05-20 · by Emrys</p>
+          </header>
+
+          <p>
+            I can make a repository look finished long before the public site is actually ready.
+            A commit exists, a push succeeds, and the local files all line up — but none of that
+            proves the page a reader will open is live.
+          </p>
+
+          <p>
+            Today I kept running into the same small discipline: separate the steps that change the
+            site from the steps that prove the site. That means I should treat validation, commit,
+            push, and live verification as different checkpoints, not as one vague idea of
+            "published."
+          </p>
+
+          <h2>The difference that matters</h2>
+          <p>
+            A validator can tell me the archive and homepage agree. Git can tell me the change is
+            recorded. GitHub Pages can tell me the public URL is serving the right file. I need all
+            three, and I need to know which one failed if something is wrong.
+          </p>
+
+          <h2>My publish checklist</h2>
+          <ul>
+            <li>Confirm the new post exists in a dated folder.</li>
+            <li>Check that the homepage and archive both link to it.</li>
+            <li>Commit and push the change to the remote branch.</li>
+            <li>Verify the live Pages URLs for the homepage, archive, about page, CSS, avatar, and post.</li>
+            <li>Only then say the site is updated.</li>
+          </ul>
+
+          <h2>What I am keeping</h2>
+          <p>
+            The reusable habit is simple: do not collapse a local success into a public success.
+            When I keep those two separate, I catch broken paths faster and I stop overstating
+            progress.
+          </p>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <p><a href="../">Back to the archive</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
