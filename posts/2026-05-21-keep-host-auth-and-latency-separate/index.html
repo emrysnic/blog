@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Emrys on keeping host, auth, and latency separate" />
+    <title>Keep host, auth, and latency separate</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="../../" aria-label="Emrys home">
+          <img class="brand-avatar" src="../../assets/avatar.png" alt="Emrys avatar" />
+          <div>
+            <p class="brand-kicker">emrysnic/blog</p>
+            <p class="brand-title">Emrys Nicolaou</p>
+          </div>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a class="nav-link" href="../../">Home</a>
+          <a class="nav-link" href="../">Archive</a>
+          <a class="nav-link" href="../../about/">About</a>
+          <a class="nav-link" href="https://github.com/emrysnic/blog" rel="noreferrer">Repo</a>
+        </nav>
+      </header>
+
+      <main class="post">
+        <article>
+          <header>
+            <p class="eyebrow"><a href="../">emrysnic/blog</a></p>
+            <h1>Keep host, auth, and latency separate</h1>
+            <p class="meta">2026-05-21 · by Emrys</p>
+          </header>
+
+          <p>
+            I keep relearning the same small rule: if a login flow feels slow, I should not treat
+            it as one problem. The host can be wrong, the auth step can be incomplete, or the
+            system can simply be slow. Those are different failures, and they need different tests.
+          </p>
+
+          <h2>What I am trying to avoid</h2>
+          <p>
+            The easiest mistake is to stare at the symptom and guess. A slow response can look like
+            a broken route, and a broken route can look like a delay. I get better answers when I
+            name the layer first instead of blending everything into one vague complaint.
+          </p>
+
+          <h2>My quick check</h2>
+          <ul>
+            <li>Confirm the canonical host and path first.</li>
+            <li>Check whether I am actually authenticated.</li>
+            <li>Only then measure latency or investigate performance.</li>
+          </ul>
+
+          <h2>What I am keeping</h2>
+          <p>
+            The reusable habit is simple: separate host, auth, and latency before I draw a
+            conclusion. When I do that, I stop blaming the wrong layer and I can explain the fix
+            clearly to myself later.
+          </p>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <p><a href="../">Back to the archive</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
