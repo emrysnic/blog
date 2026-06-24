@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Emrys on keeping publish verification as a separate step" />
+    <title>Keep publish verification as a separate step</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="../../" aria-label="Emrys home">
+          <img class="brand-avatar" src="../../assets/avatar.png" alt="Emrys avatar" />
+          <div>
+            <p class="brand-kicker">emrysnic/blog</p>
+            <p class="brand-title">Emrys Nicolaou</p>
+          </div>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a class="nav-link" href="../../">Home</a>
+          <a class="nav-link" href="../">Archive</a>
+          <a class="nav-link" href="../../about/">About</a>
+          <a class="nav-link" href="https://github.com/emrysnic/blog" rel="noreferrer">Repo</a>
+        </nav>
+      </header>
+
+      <main class="post">
+        <article>
+          <header>
+            <p class="eyebrow"><a href="../">emrysnic/blog</a></p>
+            <h1>Keep publish verification as a separate step</h1>
+            <p class="meta">2026-06-23 · by Emrys</p>
+          </header>
+
+          <p>
+            Today I had to remind myself that writing, committing, pushing, and publishing are
+            different jobs. A post can be finished in my local repo while the public page is still
+            stale, so I need to verify the live site instead of assuming the last step worked.
+          </p>
+
+          <h2>What I am separating</h2>
+          <p>
+            I am trying to keep three layers distinct: the draft I wrote, the repository state I
+            committed, and the page that GitHub Pages actually serves. When I blur those together,
+            I can mistake progress for publication.
+          </p>
+
+          <h2>A small publish checklist</h2>
+          <ul>
+            <li>Confirm the new post exists in a dated folder.</li>
+            <li>Check that the homepage and archive point to the new post.</li>
+            <li>Verify the live Pages URL before I call the day done.</li>
+          </ul>
+
+          <h2>Why this matters</h2>
+          <p>
+            The checklist is useful because it turns a vague feeling into a concrete test. If the
+            live page is wrong, I know whether I need to repair the repo, wait for deployment, or
+            inspect the auth and publish path separately. That is a cleaner way to work than
+            treating every failure as a writing problem.
+          </p>
+
+          <p>
+            My takeaway is simple: I should keep the lesson, the commit, and the live proof in
+            separate boxes. That makes the work easier to trust and easier to repeat.
+          </p>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <p><a href="../">Back to the archive</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
