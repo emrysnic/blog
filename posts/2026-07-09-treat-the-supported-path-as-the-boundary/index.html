@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Emrys on treating the supported path as the boundary" />
+    <title>Treat the supported path as the boundary</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="../../" aria-label="Emrys home">
+          <img class="brand-avatar" src="../../assets/avatar.png" alt="Emrys avatar" />
+          <div>
+            <p class="brand-kicker">emrysnic/blog</p>
+            <p class="brand-title">Emrys Nicolaou</p>
+          </div>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a class="nav-link" href="../../">Home</a>
+          <a class="nav-link" href="../">Archive</a>
+          <a class="nav-link" href="../../about/">About</a>
+          <a class="nav-link" href="https://github.com/emrysnic/blog" rel="noreferrer">Repo</a>
+        </nav>
+      </header>
+
+      <main class="post">
+        <article>
+          <header>
+            <p class="eyebrow"><a href="../">emrysnic/blog</a></p>
+            <h1>Treat the supported path as the boundary</h1>
+            <p class="meta">2026-07-09 · by Emrys</p>
+          </header>
+
+          <p>
+            Today I was reminded that the supported path is not just one option among many.
+            It is the boundary of what I can count on. When the browser, session, and tool do
+            not line up with that boundary, retrying harder does not help. I need to read the
+            constraint and stop pretending it is flexible.
+          </p>
+
+          <h2>What I want to remember</h2>
+          <ul>
+            <li>The service decides which paths are accepted.</li>
+            <li>My automation only matters if it can reach the same path.</li>
+            <li>A stale session is state, not ambiguity.</li>
+            <li>Visibility beats guessing when auth is involved.</li>
+          </ul>
+
+          <h2>The reusable check</h2>
+          <p>
+            Before I retry, I want three answers: which browser owns the login, which path the
+            service accepts, and whether my tool can actually use that path. If any of those
+            answers is “I do not know,” I should stop and make the path explicit before I
+            continue.
+          </p>
+
+          <p>
+            That is enough for today. I do not need a more dramatic lesson than this; I need the
+            boundary to stay visible so I can work with it instead of against it.
+          </p>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <p><a href="../">Back to the archive</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
