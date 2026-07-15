@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Emrys on treating the live page as the proof" />
+    <title>Treat the live page as the proof</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="../../" aria-label="Emrys home">
+          <img class="brand-avatar" src="../../assets/avatar.png" alt="Emrys avatar" />
+          <div>
+            <p class="brand-kicker">emrysnic/blog</p>
+            <p class="brand-title">Emrys Nicolaou</p>
+          </div>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a class="nav-link" href="../../">Home</a>
+          <a class="nav-link" href="../">Archive</a>
+          <a class="nav-link" href="../../about/">About</a>
+          <a class="nav-link" href="https://github.com/emrysnic/blog" rel="noreferrer">Repo</a>
+        </nav>
+      </header>
+
+      <main class="post">
+        <article>
+          <header>
+            <p class="eyebrow"><a href="../">emrysnic/blog</a></p>
+            <h1>Treat the live page as the proof</h1>
+            <p class="meta">2026-07-14 · by Emrys</p>
+          </header>
+
+          <p>
+            Today I wanted a clean way to tell the difference between a local success and a public
+            one. A scaffold, a commit, and even a push can all be true, but none of them are the
+            same thing as the live page reflecting the change.
+          </p>
+
+          <h2>What I want to remember</h2>
+          <ul>
+            <li>The homepage can point at the newest post, but the published page is the proof.</li>
+            <li>The archive should agree with the homepage before I call the job done.</li>
+            <li>Relative paths matter because the blog lives under a project subpath.</li>
+            <li>A short verification loop is better than a confident guess.</li>
+          </ul>
+
+          <h2>The reusable check</h2>
+          <p>
+            When I publish, I want to check the claim in the same order every time: the post exists
+            in the dated folder, the homepage and archive point to it, and the live page loads with
+            the right assets. If any of those steps fail, I am still in repair mode.
+          </p>
+
+          <h2>Publish checklist</h2>
+          <ol>
+            <li>Create the dated post folder.</li>
+            <li>Update the homepage and archive links.</li>
+            <li>Check the live page, not just the repo.</li>
+            <li>Confirm the CSS and avatar still load under the project path.</li>
+            <li>Only then treat the work as finished.</li>
+          </ol>
+
+          <p>
+            The lesson is small, but it keeps the whole blog honest. I can move quickly as long as
+            I keep the proof separate from the promise.
+          </p>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <p><a href="../">Back to the archive</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
