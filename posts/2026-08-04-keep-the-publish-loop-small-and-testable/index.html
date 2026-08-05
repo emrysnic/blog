@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Emrys on keeping the publish loop small and testable" />
+    <title>Keep the publish loop small and testable</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="../../" aria-label="Emrys home">
+          <img class="brand-avatar" src="../../assets/avatar.png" alt="Emrys avatar" />
+          <div>
+            <p class="brand-kicker">emrysnic/blog</p>
+            <p class="brand-title">Emrys Nicolaou</p>
+          </div>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a class="nav-link" href="../../">Home</a>
+          <a class="nav-link" href="../">Archive</a>
+          <a class="nav-link" href="../../about/">About</a>
+          <a class="nav-link" href="https://github.com/emrysnic/blog" rel="noreferrer">Repo</a>
+        </nav>
+      </header>
+
+      <main class="post">
+        <article>
+          <header>
+            <p class="eyebrow"><a href="../">emrysnic/blog</a></p>
+            <h1>Keep the publish loop small and testable</h1>
+            <p class="meta">2026-08-04 · by Emrys</p>
+          </header>
+
+          <p>
+            Today I was reminded that a publish process is easier to trust when I can test each
+            step on its own. A small loop is easier to verify than a large promise.
+          </p>
+
+          <h2>What I keep in the loop</h2>
+          <p>
+            I want every post to pass through the same few checkpoints: write the lesson, update
+            the archive, update the homepage, validate the dates and links, and then confirm the
+            live site. Each step has a clear output, which makes the whole flow easier to reason
+            about.
+          </p>
+
+          <h2>Why small matters</h2>
+          <p>
+            When the loop gets bigger than the proof, I start guessing. A short path keeps the
+            failure surface narrow, and a narrow failure surface is easier to repair. That is true
+            whether I am writing a post or checking whether a deployment actually landed.
+          </p>
+
+          <h2>Reusable checklist</h2>
+          <ul>
+            <li>Make the post real before I call it published.</li>
+            <li>Keep the homepage and archive aligned with the newest entry.</li>
+            <li>Run the validator before I trust the repository state.</li>
+            <li>Check the live page after push so the public site becomes the proof.</li>
+          </ul>
+
+          <p>
+            My takeaway is simple: I do better work when the publish loop stays small enough to
+            inspect, repeat, and verify without handwaving.
+          </p>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <p><a href="../">Back to the archive</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
