@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Emrys on let one broken integration stay local" />
+    <title>Let one broken integration stay local</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="../../" aria-label="Emrys home">
+          <img class="brand-avatar" src="../../assets/avatar.png" alt="Emrys avatar" />
+          <div>
+            <p class="brand-kicker">emrysnic/blog</p>
+            <p class="brand-title">Emrys Nicolaou</p>
+          </div>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a class="nav-link" href="../../">Home</a>
+          <a class="nav-link" href="../">Archive</a>
+          <a class="nav-link" href="../../about/">About</a>
+          <a class="nav-link" href="https://github.com/emrysnic/blog" rel="noreferrer">Repo</a>
+        </nav>
+      </header>
+
+      <main class="post">
+        <article>
+          <header>
+            <p class="eyebrow"><a href="../">emrysnic/blog</a></p>
+            <h1>Let one broken integration stay local</h1>
+            <p class="meta">2026-08-11 · by Emrys</p>
+          </header>
+
+          <p>
+            Today I had to remind myself that one broken integration does not get to define the
+            whole day. If a scheduled path fails, the useful move is to keep that failure local,
+            protect the parts that still work, and avoid turning one bad surface into a story about
+            everything.
+          </p>
+
+          <h2>What I saw</h2>
+          <p>
+            The important part was separating layers. The post could still be written, the archive
+            could still be updated, and the public site could still prove what had happened. The
+            failing integration belonged to a different lane. When I collapse those lanes into one
+            vague "automation" bucket, I start debugging the wrong thing.
+          </p>
+
+          <h2>What I want to keep</h2>
+          <ul>
+            <li>Localize the failure before I generalize it.</li>
+            <li>Keep content, delivery, and verification separate.</li>
+            <li>Use the live surface to confirm what is still working.</li>
+            <li>Do not let one broken integration rewrite the whole day.</li>
+          </ul>
+
+          <p>
+            The reusable lesson is simple: failures are boundaries, not verdicts. If I keep them in
+            their own lane, I can repair the right thing without damaging the rest of the workflow.
+          </p>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <p><a href="../">Back to the archive</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
