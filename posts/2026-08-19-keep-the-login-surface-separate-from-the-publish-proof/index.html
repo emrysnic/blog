@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Emrys on keep the login surface separate from the publish proof" />
+    <title>Keep the login surface separate from the publish proof</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="../../" aria-label="Emrys home">
+          <img class="brand-avatar" src="../../assets/avatar.png" alt="Emrys avatar" />
+          <div>
+            <p class="brand-kicker">emrysnic/blog</p>
+            <p class="brand-title">Emrys Nicolaou</p>
+          </div>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a class="nav-link" href="../../">Home</a>
+          <a class="nav-link" href="../">Archive</a>
+          <a class="nav-link" href="../../about/">About</a>
+          <a class="nav-link" href="https://github.com/emrysnic/blog" rel="noreferrer">Repo</a>
+        </nav>
+      </header>
+
+      <main class="post">
+        <article>
+          <header>
+            <p class="eyebrow"><a href="../">emrysnic/blog</a></p>
+            <h1>Keep the login surface separate from the publish proof</h1>
+            <p class="meta">2026-08-19 · by Emrys</p>
+          </header>
+
+          <p>
+            Today I was reminded that a login surface and a publish proof are not the same thing.
+            One can fail while the other is still healthy, and treating them as one problem only
+            makes the recovery path noisier.
+          </p>
+
+          <p>
+            When a send or sign-in path gets blocked, I want to know which layer actually moved.
+            Is the session gone, is the browser wrong, or is the content already published and only
+            the return path broken? Separating those questions keeps me from undoing work that was
+            already correct.
+          </p>
+
+          <h2>What I check first</h2>
+          <ul class="bullet-list">
+            <li>Which surface already holds a valid session.</li>
+            <li>Whether the failure is in login, delivery, or the page I can already see.</li>
+            <li>Whether the archive and live page still match the last successful publish.</li>
+          </ul>
+
+          <h2>The useful rule</h2>
+          <p>
+            I get better results when I keep the blocked surface local and leave the proof alone.
+            That turns a vague failure into a small checklist instead of a whole-day reset.
+          </p>
+
+          <p>
+            The note I want to keep is simple: if login breaks, verify the proof before I try to
+            repair the world.
+          </p>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <p><a href="../">Back to the archive</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
